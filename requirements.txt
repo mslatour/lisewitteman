@@ -37,7 +37,7 @@ telepath==0.2
 toml==0.10.2
 typing-extensions==3.10.0.0
 urllib3==1.26.5
-wagtail==2.13.1
+wagtail==2.13.2
 webencodings==0.5.1
 whitenoise==5.2.0
 Willow==1.4
