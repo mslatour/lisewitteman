@@ -1,0 +1,151 @@
+main {
+    background: white;
+    text-align: justify;
+    font-family: serif;
+    padding: 30px;
+}
+
+.splash-pane-left {
+    width: 25%;
+    float:left
+}
+
+.splash-pane-right {
+    width: 75%;
+    float:left
+}
+
+.splash-box {
+    position: relative;
+    width: 895px;
+    margin: auto;
+}
+
+.splash-pane-left .image-container {
+    width: 100%;
+    float:left;
+}
+
+.image-container img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.splash-body-container {
+    width: 606px;
+    float:left;
+}
+
+.splash-pane-right .image-container {
+    float: right;
+    width: 20%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.splash-pane-bottom {
+    display: none;
+}
+
+.tagline-header {
+    color: #633B18;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.tagline-subheader {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.3;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-about {
+    margin-top: 10px;
+    max-width: 840px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-about p {
+    color: black;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+@media screen and (max-width: 955px) {
+    .splash-box {
+        width: 746px;
+    }
+
+    .tagline-header {
+        font-size: 30px;
+    }
+
+    .tagline-subheader {
+        font-size: 20px;
+    }
+
+    .content-about p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .splash-box {
+        width: 100%;
+    }
+
+    .tagline-header {
+        font-size: 26px;
+    }
+
+    .tagline-subheader {
+        padding: 0;
+        font-size: 20px;
+        width: 100%;
+        float: left;
+    }
+
+    .content-about {
+        padding: 0;
+        float: left;
+        width: 100%;
+    }
+
+    .content-about p {
+        font-size: 18px;
+    }
+
+    .splash-pane-left,
+    .splash-pane-right
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .splash-pane-left .image-container,
+    .splash-pane-bottom .image-container
+    {
+        width: 50%;
+        max-width: 180px;
+    }
+
+    .splash-pane-right .image-container {
+        display: none;
+    }
+
+    .splash-pane-bottom {
+        display: block;
+    }
+}
+
+

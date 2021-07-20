@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/topbar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="mdl-layout mdl-js-layout">
+    {% include "pages/topbar.html" %}
+    {%  image page.book_image original as book_image %}
+    {%  image page.profile_image original as profile_image %}
+    <main class="mdl-layout__content">
+        <div class="splash-box">
+            <div class="tagline-header">{{ page.tagline }}</div>
+                <div class="splash-pane-left">
+                <div class="image-container">
+                    <img src="{{ book_image.url }}" />
+                </div>
+            </div>
+            <div class="splash-pane-right">
+                <div class="image-container">
+                    <img src="{{ profile_image.url }}" />
+                </div>
+
+
+                <div class="tagline-subheader">{{ page.sub_tagline }}</div>
+                <div class="content-about">{{ page.body|richtext }}</div>
+            </div>
+            <div class="splash-pane-bottom">
+                <div class="image-container">
+                    <img src="{{ profile_image.url }}" />
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock content %}
