@@ -14,7 +14,25 @@
     <main class="mdl-layout__content">
         <div class="box">
             <div class="title">{{ page.title }}</div>
-            <div class="content">{{ page.body|richtext }}</div>
+            {% for block in page.body %}
+            <section class="content">
+                {% if block.block_type == 'paragraph' %}
+                {{ block.value|richtext }}
+                {% elif block.block_type == 'logo_item' %}
+                <div class="logo_item">
+                    <div class="logo_box">
+                        {%  image block.value.logo original as logo %}
+                        <img src="{{ logo.url }}" />
+                    </div>
+                    <div class="description">
+                        {{ block.value.description|richtext }}
+                    </div>
+                </div>
+                {% else %}
+                {% include_block block %}
+                {% endif %}
+            </section>
+            {% endfor %}
         </div>
     </main>
 </div>

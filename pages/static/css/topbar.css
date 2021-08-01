@@ -8,6 +8,7 @@
     font-size: 42px;
     font-weight: bold;
     color: #633B18;
+    text-decoration: none;
 }
 
 .mdl-layout__drawer .mdl-layout-title {
@@ -47,5 +48,9 @@
 
     .mdl-layout__header nav.mdl-navigation {
         display: none;
+    }
+
+    .topbar .mdl-layout-title {
+        font-size: 24px;
     }
 }

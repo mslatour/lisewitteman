@@ -1,22 +1,20 @@
+{% load menu_tags %}
 <header class="mdl-layout__header topbar">
     <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Lise Witteman</span>
+        <a href="/" class="mdl-layout-title">Lise Witteman</a>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation -->
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="/eu-correspondent">EU-correspondent</a>
-            <a class="mdl-navigation__link" href="">Follow the EU paper trails (EN)</a>
-            <a class="mdl-navigation__link" href="/contact">Contact</a>
-        </nav>
+        {% main_menu max_levels=1 %}
     </div>
 </header>
 <div class="mdl-layout__drawer topbar">
-    <span class="mdl-layout-title">Lise Witteman</span>
-    <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="/eu-correspondent">EU-correspondent</a>
-        <a class="mdl-navigation__link" href="">Follow the EU paper trails (EN)</a>
-        <a class="mdl-navigation__link" href="/contact">Contact</a>
-    </nav>
+    <a href="/" class="mdl-layout-title">Lise Witteman</a>
+    {% main_menu max_levels=1 %}
+<!--    <nav class="mdl-navigation">-->
+<!--        <a class="mdl-navigation__link" href="/eu-correspondent">EU-correspondent</a>-->
+<!--        <a class="mdl-navigation__link" href="">Follow the EU paper trails (EN)</a>-->
+<!--        <a class="mdl-navigation__link" href="/contact">Contact</a>-->
+<!--    </nav>-->
 </div>

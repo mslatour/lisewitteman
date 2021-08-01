@@ -1,6 +1,7 @@
 main {
     background: white;
     padding: 30px;
+    font-family: serif;
 }
 
 main .box {
@@ -8,14 +9,42 @@ main .box {
     margin: auto;
 }
 
+main .content {
+    margin-bottom: 20px;
+}
 main .content p {
     font-size: 20px;
     font-family: serif;
+    margin: 0;
 }
 
 main .content p a {
     color: #633B18;
 }
+
+main .logo_item {
+    width: 100%;
+    clear: both;
+    display: inline-block;
+}
+
+main .logo_item .logo_box {
+    width: 10%;
+    float: left;
+    display: block;
+}
+
+main .logo_item .logo_box img {
+    width: 100%;
+    max-height: 100%;
+}
+
+main .logo_item .description {
+    width: 85%;
+    padding-left: 10px;
+    float: left;
+}
+
 
 main .title {
     color: #633B18;
@@ -44,5 +73,16 @@ main .title {
 
     main .title {
         font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    main .logo_item .logo_box {
+        display: none;
+    }
+
+    main .logo_item .description {
+        border-left: 3px solid #633B18;
     }
 }

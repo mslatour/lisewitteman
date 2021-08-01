@@ -1,0 +1,5 @@
+<nav class="mdl-navigation">
+    {% for menu in menu_items %}
+    <a class="mdl-navigation__link" href="{{ menu.href }}">{{ menu.text }}</a>
+    {% endfor %}
+</nav>
