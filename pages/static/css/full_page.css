@@ -12,10 +12,14 @@ main .box {
 main .content {
     margin-bottom: 20px;
 }
+
 main .content p {
     font-size: 20px;
     font-family: serif;
-    margin: 0;
+}
+
+main .content p:last-child {
+    margin-bottom: 0;
 }
 
 main .content p a {
