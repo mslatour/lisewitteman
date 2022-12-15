@@ -13,4 +13,7 @@ SECURE_SSL_REDIRECT = True
 AWS_ACCESS_KEY_ID = os.environ.get('BUCKETEER_AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('BUCKETEER_AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('BUCKETEER_BUCKET_NAME')
+
+WAGTAILADMIN_BASE_URL='https://lisewitteman.nl'
+
 django_heroku.settings(locals())

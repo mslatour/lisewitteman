@@ -1,10 +1,9 @@
 from django.db import models
-from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
+from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.core import blocks
 from wagtail.core.models import Page
 from wagtail.images.blocks import ImageChooserBlock
-from wagtail.images.edit_handlers import ImageChooserPanel
 
 
 class HomePage(Page):
@@ -30,8 +29,8 @@ class HomePage(Page):
     body = RichTextField(default='')
 
     content_panels = Page.content_panels + [
-        ImageChooserPanel('book_image'),
-        ImageChooserPanel('profile_image'),
+        FieldPanel('book_image'),
+        FieldPanel('profile_image'),
         FieldPanel('tagline'),
         FieldPanel('sub_tagline'),
         FieldPanel('body'),
@@ -45,10 +44,10 @@ class FullPage(Page):
             ('logo', ImageChooserBlock(required=True)),
             ('description', blocks.RichTextBlock()),
         ])),
-    ])
+    ], use_json_field=True)
 
     content_panels = Page.content_panels + [
-        StreamFieldPanel('body'),
+        FieldPanel('body'),
     ]
 
 
